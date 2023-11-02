@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Doctype declaration -->
+<%- include partials/header.ejs%>
+    <!-- Media queries for different screen sizes -->
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="Content/mobile.css" />
+    <link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 900px)" href="Content/tablet.css" />
+    <link rel="stylesheet" media="screen and (min-width: 901px)" href="Content/laptop.css" />
+</head>
+<body>
+<!-- Setting the ID for the page structure -->
+<div id="structure1">
+    <%- include partials/main_nav.ejs%>
+    <div id="container">
+        <!-- Contact form -->
+        <form id="form1" name="form1" class="contact-form" accept-charset="UTF-8">
+            <!-- Header for the form -->
+            <header id="header" class="info">
+                <h2 class>Contact Form</h2>
+                <!-- Line under the header -->
+                <hr>
+            </header>
+            <ul>
+                <!-- Name fields -->
+                <li id="title1" >
+                    <label class="desc" id="title1.1">Name</label>
+                    <!-- First name input -->
+                    <div class="input-container">
+                        <input id="fname-box" name="fname-box" type="text" class="text field fn">
+                        <small>First</small>
+                    </div>
+                    <!-- Last name input -->
+                    <div class="input-container">
+                        <input id="lname-box" name="lname-box" type="text" class="text field ln">
+                        <small>Last</small>
+                    </div>
+                    <!-- Horizontal line -->
+                    <hr>
+                </li>
+                <!-- Email address field -->
+                <li id="title2" >
+                    <label class="desc2" id="title2.1">Email Address</label>
+                    <div class="input-container2">
+                        <input id="email-box" name="email-box" type="text" size="50" class="text field email">
+                    </div>
+                    <!-- Horizontal line -->
+                    <hr>
+                </li>
+                <!-- Phone number field -->
+                <li id="title3">
+                    <label class="desc3" id="title3.1">Phone Number</label>
+                    <div class="input-container3">
+                        <input id="pnumber-box" name="pnumber-box" type="text" size="50" class="text field phone number">
+                    </div>
+                    <!-- Horizontal line -->
+                    <hr>
+                </li>
+                <!-- Message field -->
+                <li id="title4">
+                    <label class="desc4" id="title4.1">Message</label>
+                    <div class="input-container4">
+                        <textarea id="message-box" name="message-box" class="text field message" rows="15" cols="47" style="resize: none"></textarea>
+                    </div>
+                </li>
+            </ul>
+            <!-- Submit button -->
+            <div class="button">
+                <input type="submit" name="submitInfo" value="Submit">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<%- include partials/footer.ejs%>
+<%- include partials/bottom.ejs%>

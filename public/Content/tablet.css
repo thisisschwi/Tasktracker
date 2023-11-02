@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* CSS Document */
+@media screen and (min-width: 701px) and (max-width: 900px){
+    .hello {
+        padding: 5px;
+        padding-top: 20%;
+        padding-bottom: 20px;
+        text-align: center; /* Center text horizontally within hello */
+        font-size: 30px;
+    }
+
+    /*--------------------------------------------------*/
+    /* contact form */
+    /*--------------------------------------------------*/
+    /* projects */
+    .artline {
+        padding: 15px 5px 5px;
+        border: 3px solid #000000; /* Add a border to each item */
+        text-align: center;
+    }
+    .artline p{
+        margin: auto;
+        width: 400px;
+        text-align: center;
+    }
+}

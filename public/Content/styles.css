@@ -1,0 +1,276 @@
+@charset "UTF-8";
+/* CSS Document */
+/* For everything do this */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Main structure */
+#structure{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:linear-gradient(#755c00, #726e66) ;
+    /* view port height = top of screen to bot of screen no more no less */
+    min-height: 100vh;
+}
+/* special structure for different background */
+#structure1{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:linear-gradient(315deg, #755c00, #726e66) ;
+    /* view port height = top of screen to bot of screen no more no less */
+    min-height: 100vh;
+}
+/* navigate*/
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+}
+nav img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+/* Style the url text */
+nav ul li a{
+    text-decoration: none;
+    color: wheat;
+    /*border: 1px solid darkred;
+    background: darkred;*/
+}
+.text-color {
+    color: wheat;
+}
+/* footer style with text color */
+footer {
+    position: fixed;
+    color: wheat;
+    background-color: rgba(0, 0, 0, 0.42);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin-top: auto; /* Keep a min space above the footer */
+    text-align: center;
+}
+.navbar-footer{
+    height: 50px;
+}
+.navbar-text {
+    color: wheat;
+    font-size: 12px;
+}
+/* footer profile pic */
+footer img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.hello {
+    padding: 100px;
+    text-align: center; /* Center text horizontally within hello */
+    font-size: 40px;
+}
+.gif {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    height: 100%;
+    width: 100%;
+}
+/*--------------------------------------------------*/
+/* contact form */
+form{
+    display: block;
+}
+.contact-form {
+    font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+    letter-spacing: .01em;
+}
+form.contact-form {
+    margin: 20px 14px 0 14px;
+    padding: 0 0 20px 0;
+    position: relative;
+}
+.info h2 {
+    font-weight: normal;
+    font-size: 180%;
+    margin: 0 0 5px 0;
+    clear: left;
+}
+/* line style */
+hr {
+    border: none;
+    border-top: 2px dotted rgba(0, 0, 0, 0.42);
+    height: 1px;
+    width: 30%;
+}
+/* label styles */
+label.desc{
+    font-size: 95%;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 10px 0 3px 0;
+    border: none;
+    display: block;
+    white-space: normal;
+    width: 100%;
+}
+label.desc2{
+    font-size: 95%;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+    padding: 10px 0 3px 0;
+    border: none;
+    display: block;
+    white-space: normal;
+    width: 100%;
+}
+label.desc3{
+    font-size: 95%;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+    padding: 10px 0 3px 0;
+    border: none;
+    display: block;
+    white-space: normal;
+    width: 100%;
+}
+label.desc4{
+    font-size: 95%;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+    padding: 10px 0 3px 0;
+    border: none;
+    display: block;
+    white-space: normal;
+    width: 100%;
+}
+/* display each item as a list */
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+form ul {
+    list-style-type: none;
+}
+/* Style the container of each input and label */
+.input-container {
+    display: inline-block;
+    text-align: left; /* Center text horizontally */
+    margin: 5px; /* Add margin for spacing */
+}
+/* Style the small tags */
+ul li div small {
+    display: block;
+    margin-top: 1px; /* Add spacing between input and small */
+}
+.input-container2{
+    text-align: left;
+    margin: 5px;
+}
+/* Style the container for the textarea */
+.input-container3 {
+    text-align: left; /* Left-justify text */
+    margin: 5px; /* Add margin for spacing */
+    max-width: 100%;
+}
+.input-container4 {
+    text-align: left; /* Left-justify text */
+    margin: 5px; /* Add margin for spacing */
+    max-width: 100%;
+}
+ul li div textarea{
+    max-width: 100%;
+    max-height: 100%;
+}
+ul li div input{
+    max-width: 90%;
+}
+.button{
+    text-align: left;
+    margin: 5px 5px 40px; /* Keep the button above the footer */
+    z-index: 999; /* Make sure the button appears above other elements */
+}
+/*--------------------------------------------------*/
+/* projects */
+.artline img{
+    width: 400px;
+    height: 200px;
+    margin: 15px 15px 5px;
+}
+.artline p{
+    margin: 15px 15px 50px;
+    width: 400px;
+}
+.artline h3{
+    margin: 15px;
+}
+article {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust column width */
+    gap: 20px; /* Add gap between items */
+    margin: 15px 15px 5px;
+}
+.artline {
+    text-align: left;
+    padding: 15px;
+    border: 3px solid #000000; /* Add a border to each item */
+}
+/*--------------------------------------------------*/
+/* about me */
+article p{
+    margin: 15px 15px 50px;
+    width: 400px;
+}
+article h3{
+    margin: 15px;
+}
+.about-section{
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width:100%;
+    height:100vh;
+    background-position: center;
+}
+.video-container {
+    display: flex;
+    padding: 10px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 50vh; /* adjust the height  */
+}
+
+video {
+    /* Ensure the video fits within the container */
+    max-width: 100%;
+    max-height: 100%;
+}
+.about-text{
+    text-align: left;
+    padding: 15px;
+    border: 3px solid #000000;
+}
+article div h3{
+    font-size: 30px;
+}
+article div p{
+    font-size: 15px;
+}
+article div img{
+    height: 200px; /* size the image */
+    width: 200px;
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block; /* center the image */
+    margin: 0 auto;
+}

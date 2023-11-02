@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<%- include partials/header.ejs%>
+    <!-- Media queries for different screen sizes -->
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="Content/mobile.css" />
+    <link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 900px)" href="Content/tablet.css" />
+    <link rel="stylesheet" media="screen and (min-width: 901px)" href="Content/laptop.css" />
+</head>
+<body>
+<!-- Setting the ID for the page structure -->
+<div id="structure">
+    <%- include partials/main_nav.ejs%>
+    <!-- Hello section -->
+    <div class="hello-container">
+        <div class="hello">
+            <h2>Oh, Hi! I am Kelvin Wong and Welcome to my Website</h2>
+        </div>
+        <!-- Gif image -->
+        <div class="gif">
+            <img src="Assets/SHARK%20DANCE.gif" alt="Shark Dance.gif">
+        </div>
+    </div>
+</div>
+</body>
+<%- include partials/footer.ejs%>
+<%- include partials/bottom.ejs%>

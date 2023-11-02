@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/Content/app.css' />
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home">INFR3120</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <% if (title == "Home") { %>
+                <a class="nav-link active" aria-current="page" href="/home">
+              <% } else { %>
+                <a class="nav-link" href="/home">
+              <% } %>
+                  <i class="fa-solid fa-house-chimney"></i> Home</a></a>
+            </li>
+
+            <li class="nav-item">
+              <% if (title == 'About') { %>
+                <a class="nav-link active" aria-current="page" href="/about">
+              <% } else { %>
+                <a class="nav-link" href="/about">
+              <% } %>
+                About</a></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/services">Services</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/products">Products</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/contactus">Contact us</a>
+            </li>
+        </div>
+      </div>
+    </nav>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <!-- Fixed footer -->
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+      <div class="container-fluid">
+        <h6 class="navbar-text">&copy; Copyright 2023. All Rights Reserved.</h6>
+      </div>
+    </nav>
+    <!--Script files -->
+    <script src="/Script/app.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.js/bootstrap.min.js"></script>
+    <script src="/jquery/dist/jquery.js/jquery.min.js"></script>
+  </body>
+</html>

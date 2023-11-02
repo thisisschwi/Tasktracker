@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Doctype declaration -->
+<%- include partials/header.ejs%>
+    <!-- Media queries for different screen sizes -->
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="Content/aboutme_mobile.css" />
+    <link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 900px)" href="Content/tablet.css" />
+    <link rel="stylesheet" media="screen and (min-width: 901px)" href="Content/laptop.css" />
+</head>
+<body>
+<!-- Setting the ID for the page structure -->
+<div id="structure">
+    <%- include partials/main_nav.ejs%>
+    <div class="about-section">
+        <!-- Container for the video -->
+        <div class="video-container">
+            <video src="Assets/About-me-video.mp4" type="video/mp4" controls poster="Assets/poster.jpg" preload >
+                Your browser doesn't support the video tag.
+            </video>
+        </div>
+        <!-- Article section with information about me -->
+        <article>
+            <div class="about-text">
+                <h3>About Me</h3>
+                <p>I am a second year networking and IT student at Ontario Tech University. I have a background in creating
+                    3D art assets for games. I also have passed my CCNA certificate exam, and I am willing to help
+                    you on things related to networking!</p>
+                <!-- Link to CCNA badge -->
+                <a href="https://www.credly.com/badges/bdc477eb-c31d-427b-ab59-2e1c85cafca7"><img src="Assets/ccna_600.png" alt="CCNA.png"></a>
+                <!-- profile picture -->
+                <img src="Assets/poster.jpg" alt="profile picture.jpg">
+            </div>
+        </article>
+    </div>
+</div>
+</body>
+<%- include partials/footer.ejs%>
+<%- include partials/bottom.ejs%>

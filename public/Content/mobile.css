@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* CSS Document */
+@media screen and (max-width: 480px){
+    .hello {
+        padding: 5px;
+        padding-top: 30%;
+        padding-bottom: 20px;
+        text-align: center; /* Center text horizontally within hello */
+        font-size: 20px;
+    }
+    /*--------------------------------------------------*/
+    /* contact form */
+    .input-container2{
+        text-align: left;
+        margin: 5px;
+        max-width: 100%;
+    }
+    /* Style the container for the textarea */
+    .input-container3 {
+        text-align: left; /* Left-justify text */
+        margin: 5px; /* Add margin for spacing */
+        max-width: 100%;
+    }
+    ul li div textarea{
+        max-width: 90%;
+        max-height: 80%;
+    }
+    /*--------------------------------------------------*/
+    /* projects */
+    .artline img{
+        width: 100px;
+        height: 50px;
+        text-align: center;
+    }
+    .artline p{
+        margin: auto;
+        width: 250px;
+        text-align: left;
+    }
+}
+.navbar-text {
+    color: wheat;
+    font-size: 7px;
+}

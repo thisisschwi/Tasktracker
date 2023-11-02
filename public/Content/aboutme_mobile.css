@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* CSS Document */
+@media screen and (max-width: 480px){
+    /* about me */
+    #structure{
+        height: 155vh; /* change the height of the page */
+    }
+    .about-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    .video-container {
+        padding: 10px;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 50vh; /* adjust the height */
+    }
+
+    video {
+        max-width: 100%; /* Ensure the video fits within the container */
+        padding-top: 80px;
+    }
+    .about-text{
+        width: 280px;
+        justify-content: center; /* Center horizontally */
+        margin: 5px 5px 5px;
+        border: 3px solid #000000;
+    }
+    article div h3{
+        font-size: 30px;
+    }
+    article div p{
+        margin: auto;
+        width: 230px;
+        font-size: 15px;
+    }
+    article div img{
+        display: flex;
+        flex-direction: column;
+        /* size the image */
+        height: 100px;
+        width: 100px;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+    }
+    article {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjust column width */
+        margin: 10px 10px 5px;
+    }
+}
+.navbar-text {
+    color: wheat;
+    font-size: 7px;
+}
