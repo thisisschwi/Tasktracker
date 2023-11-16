@@ -11,30 +11,28 @@
     <%- include ../partials/main_nav.ejs%>
     <main class="container">
         <div class="row">
-            <div class="col-md-offset-3 col-md-10">
+            <div class="col-md-offset-3 col-md-11">
                 <h1><% title %></h1>
                 <a href="/task-list/add" class="btn btn-primary" role="button">
                     <i class="fas fa-plus-circle"></i> Add a task</a>
                 <br>
         <table class="table table-bordered table-striped table-hover">
             <tr class="d-flex">
-                <th class="text-center col-2">Task</th>
-                <th class="text-center col-2">Day</th>
-                <th class="text-center col-2">Time</th>
-                <th class="text-center col-4"></th>
+                <th class="text-center col-3">Task</th>
+                <th class="text-center col-3">Day</th>
+                <th class="text-center col-3">Time</th>
+                <th class="text-center col-3"></th>
             </tr>
             <!-- repeat template -->
             <%for(let count=0; count < taskList.length; count++){%>
                 <tr class="d-flex">
-                    <td class="text-center col-2"><%=taskList[count].tasks%></td>
-                    <td class="text-center col-2"><%=taskList[count].day%></td>
-                    <td class="text-center col-2"><%=taskList[count].time%></td>
-                    <td class="text-center col-2">
+                    <td class="text-center col-3"><%=taskList[count].tasks%></td>
+                    <td class="text-center col-3"><%=taskList[count].day%></td>
+                    <td class="text-center col-3"><%=taskList[count].time%></td>
+                    <td class="text-center col-3">
                         <a href="task-list/edit/<%=taskList[count]._id%>"
                            class = "btn btn-primary">
                             <i class="fas fa-pen-alt"></i>Edit</a>
-                        </td>
-                    <<td class="text-center col-2">
                         <a href="/task-list/delete/<%= taskList[count]._id %>"
                            class="btn btn-danger btn-sm">
                             <i class="fas trash-alt"></i>Delete</a>
