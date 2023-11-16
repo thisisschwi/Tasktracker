@@ -21,9 +21,7 @@ router.get('/projects', function(req, res, next) {
   res.render('projects', { title: 'Projects' });
 });
 /* GET Services page. */
-router.get('/task-list', function(req, res, next) {
-  res.render('task/list', { title: 'Task List' });
-});
+
 /* GET Contact us page. */
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact' });

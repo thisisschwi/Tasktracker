@@ -1,3 +1,3 @@
 module.exports = {
-    "URI": "mongodb://172.0.0.1:27017/tasktracker"
+    "URI": "mongodb+srv://kelvinwong2:DFNSCHECxQMkIIje@task.3t8kcph.mongodb.net/?retryWrites=true&w=majority"
 }

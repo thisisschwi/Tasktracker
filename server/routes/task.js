@@ -5,7 +5,7 @@ let task = require('../models/task');
 let TaskController = require('../controllers/task')
 /* Get route for the Bio Books list */
 // Read Operation
-router.get('/', TaskController.DislayTasklist);
+router.get('/', TaskController.DisplayTaskList);
 /* Get route for Add Book page --> Create */
 router.get('/add', TaskController.AddTask);
 /* Post route for Add Book page --> Create */

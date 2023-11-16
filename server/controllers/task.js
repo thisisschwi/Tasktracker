@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 let task = require('../models/task');
 
-module.exports.DislayTasklist = async (req,res,next)=>{
+module.exports.DisplayTaskList = async (req,res,next)=>{
     try{
-        const BookList = await task.find(); //< Use of await
+        const taskList = await task.find(); //< Use of await
         res.render('task/list', {title: 'Task List', taskList: taskList
         });
     }catch(err){
@@ -39,11 +39,11 @@ module.exports.ProcessTask = async (req,res,next)=>{
             "time":req.body.time
         });
         task.create(newtask).then(() =>{
-            res.redirect('/tasklist')
+            res.redirect('/task-list')
         })
     }
     catch(error){
-        console.error(err);
+        console.error(error);
         res.render('task/list',
             {
                 error: 'Error on the server'
@@ -59,7 +59,7 @@ module.exports.EditTask = async (req,res,next)=>{
             })
     }
     catch(error){
-        console.error(err);
+        console.error(error);
         res.render('task/list',
             {
                 error: 'Error on the server'
@@ -70,17 +70,18 @@ module.exports.EditTask = async (req,res,next)=>{
 module.exports.ProcessEditTask = (req,res,next)=>{
     try{
         const id = req.params.id;
-        let updatedtask = task({
+        let updatedTask = task({
+            "_id":id,
             "tasks":req.body.tasks,
             "day":req.body.day,
             "time":req.body.time
         });
-        Book.findByIdAndUpdate(id,updatedtask).then(()=>{
-            res.redirect('/tasklist')
+        task.findByIdAndUpdate(id,updatedTask).then(()=>{
+            res.redirect('/task-list')
         });
     }
     catch(error){
-        console.error(err);
+        console.error(error);
         res.render('task/list',
             {
                 error: 'Error on the server'
@@ -93,11 +94,11 @@ module.exports.DeleteTask = (req,res,next)=>{
         let id = req.params.id;
         task.deleteOne({_id:id}).then(() =>
         {
-            res.redirect('/tasklist')
+            res.redirect('/task-list')
         })
     }
     catch(error){
-        console.error(err);
+        console.error(error);
         res.render('task/list',
             {
                 error: 'Error on the server'
