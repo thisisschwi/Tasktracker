@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<%- include ../partials/header.ejs%>
+<!-- Media queries for different screen sizes -->
+<link rel="stylesheet" media="screen and (max-width: 480px)" href="Content/mobile.css" />
+<link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 900px)" href="Content/tablet.css" />
+<link rel="stylesheet" media="screen and (min-width: 901px)" href="Content/laptop.css" />
+</head>
+<body>
+<!-- Setting the ID for the page structure -->
+<div id="structure">
+    <%- include ../partials/main_nav.ejs%>
+    <!-- content for add page -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md=offset-3 col-md-6">
+                <h1><%= title %></h1>
+                <form class="form" method="POST">
+                    <div class="form-group">
+                        <label for="taskTextField">Task</label>
+                        <input type="text" class="form-control"
+                               id="taskTextField"
+                               placeholder="Enter task"
+                               name="tasks"
+                               value = "<%=task.task%>"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dayTextField">Task</label>
+                        <input type="text" class="form-control"
+                               id="dayTextField"
+                               placeholder="Enter day"
+                               name="day"
+                               value = "<%=task.day%>"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeTextField">Task</label>
+                        <input type="text" class="form-control"
+                               id="timeTextField"
+                               placeholder="Enter time"
+                               name="time"
+                               value = "<%=task.time%>"
+                               required>
+                    </div>
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-edit"></i> Submit</button>
+
+                    <a href="/tasks-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<%- include ../partials/footer.ejs%>
+<%- include ../partials/bottom.ejs%>
