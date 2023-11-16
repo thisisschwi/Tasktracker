@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<%- include ../partials/header.ejs%>
+<!-- Media queries for different screen sizes -->
+<link rel="stylesheet" media="screen and (max-width: 480px)" href="Content/mobile.css" />
+<link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 900px)" href="Content/tablet.css" />
+<link rel="stylesheet" media="screen and (min-width: 901px)" href="Content/laptop.css" />
+</head>
+<body>
+<!-- Setting the ID for the page structure -->
+<div id="structure">
+    <%- include ../partials/main_nav.ejs%>
+    <main class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-10">
+                <h1><% title %></h1>
+                <a href="/tasklist/add" class="btn btn-primary" role="button">
+                    <i class="fas fa-plus-circle"></i> Add a task</a>
+                <br>
+                <br>
+        <table class="table table-bordered table-striped table-hover">
+            <tr class="d-flex">
+                <th class="text-center col-2">Task</th>
+                <th class="text-center col-2">Day</th>
+                <th class="text-center col-2">Time</th>
+                <th class="text-center col-2"></th>
+                <th class="text-center col-2"></th>
+            </tr>
+            <!-- repeat template -->
+            <%for(let count=0; count < tasklist.length; count++){%>
+                <tr class="d-flex">
+                    <td class="text-center col-2"><%=tasklist[count].tasks%></td>
+                    <td class="text-center col-2"><%=tasklist[count].day%></td>
+                    <td class="text-center col-2"><%=tasklist[count].time%></td>
+                    <td class="text-center col-2">
+                        <a href="tasklist/edit/<%=tasklist[count]._id%>"
+                           class = "btn btn-primary">
+                            <i class="fas fa-pen-alt"></i>Edit</a>
+                        </td>
+                    <<td class="text-center col-1">
+                        <a href="/tasklist/delete/<%= taskList[count]._id %>"
+                           class="btn btn-danger btn-sm">
+                            <i class="fas trash-alt"></i>Delete</a>
+                    </td>
+                </tr>
+            <% } %>
+        </table>
+        </div>
+        </div>
+    </main>
+</div>
+</body>
+<%- include ../partials/footer.ejs%>
+<%- include ../partials/bottom.ejs%>
+<!-- comment -->
